@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,100&family=Bebas+Neue&family=Caveat&family=Dancing+Script&family=PT+Sans&family=Rubik+Iso&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+}
+
+nav{
+    background-color: rgb(195, 47, 25);
+    height: 60px;
+    /*centralize the content */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    /* defines order of overlapping of html elts */
+    z-index: 1;
+}
+
+nav ul{
+    /*display list items serially */
+    display: flex; 
+}
+
+nav ul li a{
+    display: flex;
+    margin: 30px;
+    /* remove lines on link */
+    text-decoration: none;
+    /* color link */
+    color: azure;
+}
+nav ul li a:hover{
+    color: black;
+    /* shadow effent on hover */
+    text-shadow: 2px 4px 8px rgb(91, 66, 30) ;
+}
+video{
+    width: 100%;
+
+}
+.overlay{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    color: white;
+    text-shadow: 2px 4px 8px rgb(171, 148, 121)
+    
+}
+span{
+    color: brown;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+/* place contents before image */
+#home::before{
+    content: "";
+    background-image: url('https://w0.peakpx.com/wallpaper/157/850/HD-wallpaper-girl-model-is-wearing-red-top-and-blue-jeans-standing-in-yellow-red-leaves-trees-background-girls.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 700px;
+    opacity: 0.7;    
+}
+
+/* to place content inside image */
+
+.main{
+    position: absolute;
+    border: 2px ridge white;
+    padding: 70px;
+    top: 1040px;
+    left: 10px;
+    box-shadow: 2px 3px 4px 5px rgb(200, 50, 50);
+        /* defines order of overlapping of html elts */
+    
+}
+
+h1{
+    text-align: center;
+    font-size: xx-large;
+    margin: 10px;
+}
+h1:hover{
+    text-shadow: 3px 4px 5px rgb(84, 55, 55) ;
+}
+
+.pic{
+    display: flex;
+}
+
+.pic p{
+    text-align: justify;
+    margin: 30px;
+}
+
+.intro h3{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.pic img{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+}
+.gallery{
+    margin-left: 200px;
+}
+.gallery img{
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+     /* transition: width 2s, height 2s, transform 2s;  */
+}
+
+.gallery img:hover{
+    box-shadow: 4px 5px 6px 7px black;
+    /* transform: rotate(360deg) */
+}
+
+.row{
+    display: flex;
+}
+
+.box{
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    border: 3px ridge black;
+    /* provide gradient color  to content */
+    background: linear-gradient(to top, rgb(222, 69, 69) 50%, white 50%);
+    /* for providing effect */
+    background-size: 100% 200%;
+    transition: all 0.8s;
+}
+.box:hover{
+    /* for effect */
+    background-position: bottom;
+    border: none;
+    box-shadow: 3px 4px 5px 2px black;
+}
+.box h4{
+    text-align: center;
+    color: brown;
+}
+.box p{
+    text-align: justify;
+    margin: 10px;
+}
+
+.box img{
+    width: 100%;
+}
+
+form{
+    width: 500px;
+    margin-left: 35%;
+}
+
+.input{
+    display: flex;
+    width: 100%;
+}
+
+button{
+    padding-left: 45px;
+}
+
+/* media query */
+
+@media (max-width: 400px) {
+
+    *{
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+
+    nav{
+        width: 650px;
+        background-color: cadetblue;
+    }
+
+    video{
+        width: 650px;
+    }   
+    
+    .overlay{
+        top: 30%;
+        left: 43%;
+    }
+
+    h1{
+        margin-left: 255px;
+    }
+
+    .row{
+        width: 650px;
+        height: 1890px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box{
+        width: 300px;
+        height: 400px;
+        margin-left: 220px;
+    }
+    
+    .intro p{
+        width: 300px;
+    }
+
+    form{
+        margin-left: 20%;
+        border: 2px solid black;
+    }
+
+    .pic img{
+        margin-top: 150px;
+    }
+
+    .main{
+        padding: 40px;
+        top: 550px;
+        left: 350px;
+    }
+    #home::before{
+        /* background-image: url('https://w0.peakpx.com/wallpaper/157/850/HD-wallpaper-girl-model-is-wearing-red-top-and-blue-jeans-standing-in-yellow-red-leaves-trees-background-girls.jpg'); */
+        width: 650px;
+    }
+    
+
+}
+
+@media (max-width: 773px) {
+
+    *{
+        font-family: 'Times New Roman', Times, serif;
+
+    }
+
+
+    nav{
+        width: 930px;
+        background-color: cadetblue;
+    }
+
+    video{
+        width: 930px;
+    }   
+    
+    .overlay{
+        top: 30%;
+        left: 43%;
+    }
+
+    h1{
+        margin-left: 255px;
+    }
+
+    .row{
+        width: 930px;
+        height: 1890px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box{
+        width: 300px;
+        height: 400px;
+        margin-left: 220px;
+    }
+    
+    .intro p{
+        width: 560px;
+    }
+
+    form{
+        margin-left: 20%;
+        border: 2px solid black;
+    }
+
+    .pic img{
+        margin-top: 50px;
+    }
+
+    .main{
+        padding: 40px;
+        top: 670px;
+        left: 425px;
+    }
+    #home::before{
+        /* background-image: url('https://w0.peakpx.com/wallpaper/157/850/HD-wallpaper-girl-model-is-wearing-red-top-and-blue-jeans-standing-in-yellow-red-leaves-trees-background-girls.jpg'); */
+        width: 930px;
+    }
+    
+
+}
+
+
+
